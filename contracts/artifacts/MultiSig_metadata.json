@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "depositeTo",
+						"type": "address"
+					}
+				],
+				"name": "balancedAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "Deposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/multiSig_Wallet.sol": "MultiSig"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/multiSig_Wallet.sol": {
+			"keccak256": "0x7f7b6249c6e983349c2091bf3e6c56434f5c0e279d0804c0e97f0c27d1c18755",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://13ce1622a0abc615e2b012f43aa9315d8b7ac0c7342fce2e4e4f87b9ae19ee0b",
+				"dweb:/ipfs/QmbJqMJE6Rfe6K951FKkUFKdhWnhYN3swY5Rw7oxvDWAtw"
+			]
+		}
+	},
+	"version": 1
+}
