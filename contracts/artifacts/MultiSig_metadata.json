@@ -6,7 +6,18 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_owners",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_limit",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -43,8 +54,32 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getOwner",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_receiver",
+						"type": "address"
+					}
+				],
+				"name": "createTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "owners",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -84,11 +119,11 @@
 	},
 	"sources": {
 		"contracts/multiSig_Wallet.sol": {
-			"keccak256": "0x7f7b6249c6e983349c2091bf3e6c56434f5c0e279d0804c0e97f0c27d1c18755",
+			"keccak256": "0x53b0d038298ff425ea6a2bf8894fc9d985dcb8ca52bbe6ba4e419db9c209370e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://13ce1622a0abc615e2b012f43aa9315d8b7ac0c7342fce2e4e4f87b9ae19ee0b",
-				"dweb:/ipfs/QmbJqMJE6Rfe6K951FKkUFKdhWnhYN3swY5Rw7oxvDWAtw"
+				"bzz-raw://8885191abd7c6a7db2576c0d1df099e1ee3028a39fcabeb284c08db2f6942d36",
+				"dweb:/ipfs/QmaFgjxXRKaSv9ijrz8yHE3SbFVus511dD7Jx7VHZM8gBv"
 			]
 		}
 	},
