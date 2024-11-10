@@ -57,6 +57,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_amount",
 						"type": "uint256"
 					},
@@ -69,6 +82,59 @@
 				"name": "createTransfer",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTransferRedquest",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address payable",
+								"name": "receiver",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "approvals",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "hasBeensend",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct MultiSig.Transfer[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -119,11 +185,11 @@
 	},
 	"sources": {
 		"contracts/multiSig_Wallet.sol": {
-			"keccak256": "0x53b0d038298ff425ea6a2bf8894fc9d985dcb8ca52bbe6ba4e419db9c209370e",
+			"keccak256": "0xae1697990c42094f5666e7cbc229d00b6ccaa82efd9432dc4684ef077a602b4b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8885191abd7c6a7db2576c0d1df099e1ee3028a39fcabeb284c08db2f6942d36",
-				"dweb:/ipfs/QmaFgjxXRKaSv9ijrz8yHE3SbFVus511dD7Jx7VHZM8gBv"
+				"bzz-raw://fd29de000c7b7ae6dc8ee2255d746c07be3f8baf2bfc6efbf5db7051fab3dc83",
+				"dweb:/ipfs/QmQ7mCRk74JKdFUpCXeaPmwbiX7aMA3LYxLaFAaXJD2562"
 			]
 		}
 	},

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.5;
+pragma abicoder v2;
 
 contract MultiSig{
 
@@ -31,6 +32,32 @@ contract MultiSig{
 
     Transfer[] transferRequest;
 
+    function createTransfer(uint _amount, address payable _receiver) public onlyOnwers{
+        transferRequest.push(Transfer(_amount, _receiver, 0, false, transferRequest.length));
+    }
+
+    mapping (address => mapping (uint => bool)) approvals;
+
+    function approve(uint _id) public onlyOnwers{
+        require(transferRequest[_id].hasBeensend == false);
+        require(approvals[msg.sender][_id] == false, "You already voted.");
+
+        approvals[msg.sender][_id] == true;
+        transferRequest[_id].approvals++;
+        if(transferRequest[_id].approvals >= limit) {
+        transferRequest[_id].hasBeensend = true;
+        transferRequest[_id].receiver.transfer(transferRequest[_id].amount);
+        }
+    }
+    function getTransferRedquest() public view returns (Transfer[] memory) {
+        return transferRequest;
+    }
+
+    function getBalance() public view returns (uint){
+        return address(this).balance;
+    }
+    
+
     mapping(address => uint) balance;
     event balancedAdded(uint amount, address depositeTo);
     function Deposit() payable public returns (uint){
@@ -39,8 +66,5 @@ contract MultiSig{
         return balance[msg.sender];
     }
 
-    function createTransfer(uint _amount, address payable _receiver) public onlyOnwers{
-        transferRequest.push(Transfer(_amount, _receiver, 0, false, transferRequest.length));
-    }
-    //
+    
 }
