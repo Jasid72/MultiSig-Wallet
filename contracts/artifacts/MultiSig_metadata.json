@@ -27,6 +27,44 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_approvals",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_approver",
+						"type": "address"
+					}
+				],
+				"name": "ApprovalReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "TransferApproved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
 					},
@@ -38,6 +76,37 @@
 					}
 				],
 				"name": "balancedAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amnount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_initiator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_reciver",
+						"type": "address"
+					}
+				],
+				"name": "transferRequestCreated",
 				"type": "event"
 			},
 			{
@@ -185,11 +254,11 @@
 	},
 	"sources": {
 		"contracts/multiSig_Wallet.sol": {
-			"keccak256": "0xae1697990c42094f5666e7cbc229d00b6ccaa82efd9432dc4684ef077a602b4b",
+			"keccak256": "0xa01a6250452d3a7c0d714d9e5c32203d1d5686dee75235c794a60c7c10e50e24",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fd29de000c7b7ae6dc8ee2255d746c07be3f8baf2bfc6efbf5db7051fab3dc83",
-				"dweb:/ipfs/QmQ7mCRk74JKdFUpCXeaPmwbiX7aMA3LYxLaFAaXJD2562"
+				"bzz-raw://2faf4533424f3890e71a99d461c347354a3af8a1904cb931f7072071fac1c2c8",
+				"dweb:/ipfs/Qmf27qsXxrHMPp9ZZ12UTvwyqLSW3M1uDreVPCynp8z1sV"
 			]
 		}
 	},

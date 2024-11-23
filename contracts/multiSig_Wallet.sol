@@ -30,9 +30,14 @@ contract MultiSig{
         uint id;
     }
 
+    event transferRequestCreated(uint _id, uint _amnount, address _initiator, address _reciver);
+    event ApprovalReceived(uint _id, uint _approvals, address _approver);
+    event TransferApproved(uint _id);
+
     Transfer[] transferRequest;
 
     function createTransfer(uint _amount, address payable _receiver) public onlyOnwers{
+        emit transferRequestCreated(transferRequest.length, _amount, msg.sender, _receiver);
         transferRequest.push(Transfer(_amount, _receiver, 0, false, transferRequest.length));
     }
 
@@ -44,9 +49,13 @@ contract MultiSig{
 
         approvals[msg.sender][_id] == true;
         transferRequest[_id].approvals++;
+
+        emit ApprovalReceived(_id, transferRequest[_id].approvals, msg.sender);
+
         if(transferRequest[_id].approvals >= limit) {
         transferRequest[_id].hasBeensend = true;
         transferRequest[_id].receiver.transfer(transferRequest[_id].amount);
+        emit TransferApproved(_id);
         }
     }
     function getTransferRedquest() public view returns (Transfer[] memory) {
